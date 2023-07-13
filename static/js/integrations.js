@@ -199,6 +199,7 @@ const AemIntegration = {
             }).then(response => {
                 this.is_fetching = false
                 if (response.ok) {
+                     delete this.$data['id']
                      this.$emit('update', {...this.$data, section_name: this.section_name})
                 } else {
                     this.handleError(response)
