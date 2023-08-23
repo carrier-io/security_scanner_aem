@@ -13,7 +13,7 @@ const AemIntegration = {
                 selected_integration: id,
                 scanner_host,
                 scanner_port,
-                save_intermediates_to,
+                // save_intermediates_to,
             } = this
             return {
                 config,
@@ -21,7 +21,7 @@ const AemIntegration = {
                 id,
                 scanner_host,
                 scanner_port,
-                save_intermediates_to,
+                // save_intermediates_to,
             }
         },
         scan_types_indeterminate() {
@@ -89,7 +89,7 @@ const AemIntegration = {
 
             scanner_host: "127.0.0.1",
             scanner_port: "4444",
-            save_intermediates_to: '/data/intermediates/dast',
+            // save_intermediates_to: '/data/intermediates/dast',
         })
     },
     template: `
@@ -129,8 +129,8 @@ const AemIntegration = {
                         <div class="invalid-feedback">[[ error.scanner_port ]]</div>
                     </div>
                 </div>
-                
-                <h9>Save intermediates to</h9>
+
+                <!--<h9>Save intermediates to</h9>
                 <p>
                     <h13>Optional</h13>
                 </p>
@@ -138,7 +138,7 @@ const AemIntegration = {
                     placeholder=""
                     v-model="save_intermediates_to"
                     :class="{ 'is-invalid': error.save_intermediates_to }">
-                <div class="invalid-feedback">[[ error.save_intermediates_to ]]</div>
+                <div class="invalid-feedback">[[ error.save_intermediates_to ]]</div>-->
             </div>
         </div>
     `
@@ -146,4 +146,3 @@ const AemIntegration = {
 
 
 register_component('scanner-aem', AemIntegration)
-
